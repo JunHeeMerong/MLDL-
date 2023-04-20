@@ -1,0 +1,262 @@
+@import url(reset.css);
+header {
+  height: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+  opacity: 0;
+  /* margin-top: -50px; */
+  transition: 1s;
+}
+/* 마우스 대면 나타나는 효과 */
+header ul:hover {
+  opacity: 1;
+  /* margin-top: 0px; */
+}
+
+header ul li a {
+  color: #fff;
+  font-size: 20px;
+}
+.main_visual {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/car.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+.goal_visual {
+  background-color: black;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.goal_img {
+  background-size: cover;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.goal_img img {
+  height: 100%;
+}
+.goal_visual h1 {
+  font-size: 70px;
+  color: darkgrey;
+  font-style: unset;
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+}
+.goal_textbox {
+  height: 30%;
+  padding: 50px;
+  display: flex;
+  margin-left: 50px;
+  margin-top: -20px;
+  gap: 30px;
+  line-height: 1.8;
+}
+.goal_textbox * {
+  width: 100%;
+  color: #ced4da;
+  font-size: 16px;
+  display: flex;
+  font-family: "Nanum Myeongjo", serif;
+}
+.black_bg {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+.title {
+  font-size: 70px;
+  color: #fff;
+  text-align: center;
+  padding-top: 200px;
+  font-family: "Titillium Web", sans-serif;
+}
+.slide_section {
+  position: relative;
+  margin-top: 100px;
+}
+.slide_wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slide_container {
+  width: max-content;
+  position: relative;
+  left: 0;
+  transition: 1s;
+  display: flex;
+  align-items: center;
+}
+.slide_container div {
+  width: 1200px;
+  overflow: hidden;
+}
+.slide_container div img {
+  width: 100%;
+  margin: 0%;
+  overflow: hidden;
+}
+.slide_btn {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: calc(50% - 50px);
+  cursor: pointer;
+}
+.slide_btn.left {
+  background-image: url("../images/왼쪽.jpg");
+  left: calc(50% - 700px);
+  background-repeat: no-repeat;
+}
+.slide_btn.right {
+  background-image: url("../images/오른쪽.jpg");
+  right: calc(50% - 750px);
+  background-repeat: no-repeat;
+}
+.searchbox {
+  display: flex;
+  background-color: black;
+  height: 100vh;
+  align-items: center;
+}
+.searching {
+  width: 50%;
+  height: 200%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.searching p {
+  color: #fff;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+.searching P span:nth-child(1) {
+  color: blue;
+}
+.searching P span:nth-child(2) {
+  color: red;
+}
+.searching P span:nth-child(3) {
+  color: yellow;
+}
+.searching P span:nth-child(4) {
+  color: blue;
+}
+.searching P span:nth-child(5) {
+  color: greenyellow;
+}
+.searching P span:nth-child(6) {
+  color: red;
+}
+.searchstart {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+}
+.search_container {
+  width: 100%;
+  height: 100%;
+}
+.search_img {
+  width: 100%;
+  position: relative;
+  left: 25%;
+  transition: 1s;
+}
+#imgupload {
+  background: #fff;
+}
+.search_img.active {
+  left: -1%;
+}
+.team {
+  background-color: black;
+  padding: 30px;
+  padding-top: 150px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+}
+.team .team_row {
+  display: flex;
+  justify-content: center;
+}
+.team .team_row div {
+  position: relative;
+}
+.team .team_row div .img {
+  height: 400px;
+  background-color: black;
+  border: #fff;
+}
+.team .team_row div .img:hover {
+  opacity: 1;
+  transition: 1s;
+  background-color: #fff;
+}
+.team .team_row div p {
+  font-size: 25px;
+  color: #000;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+}
+.search_container h2 {
+  text-align: center;
+  font-size: 80px;
+  margin-top: 120px;
+}
+.graph_container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid black;
+  border-bottom: 0px;
+  width: 80%;
+  margin: 40px auto;
+  opacity: 0;
+  transition: 0.5s;
+}
+.graph_container.active {
+  opacity: 1;
+}
+.graph_container div {
+  padding: 25px;
+}
+.graph_container div:nth-child(2n - 1) {
+  width: 20%;
+  border: 0px solid black;
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+  font-weight: 900;
+  text-align: center;
+}
+.graph_container div:nth-child(2n) {
+  width: 80%;
+  border: 0px solid black;
+  border-bottom-width: 3px;
+  text-align: center;
+}
